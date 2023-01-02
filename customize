@@ -1,0 +1,32 @@
+#!/bin/bash
+
+FILES="`dirname $0`/files/"
+
+sudo mkdir -p /etc/acpi/actions
+sudo cp "$FILES/etc/acpi/actions/ac_adapter.sh" /etc/acpi/actions/
+sudo cp "$FILES/etc/acpi/actions/lid.sh" /etc/acpi/actions/
+sudo chmod 0755 /etc/acpi/actions/*
+
+sudo mkdir -p /etc/acpi/events
+sudo cp "$FILES/etc/acpi/events/ac_adapter" /etc/acpi/events/
+sudo cp "$FILES/etc/acpi/events/lid" /etc/acpi/events/
+
+sudo cp "$FILES/usr/share/pixmaps/wallpaper-arch.png" /usr/share/pixmaps/
+[ ! -f /usr/share/pixmaps/wallpaper ] && sudo ln -sf /usr/share/pixmaps/wallpaper-arch.png /usr/share/pixmaps/wallpaper
+
+sudo cp "$FILES/etc/DIR_COLORS" /etc/
+sudo cp "$FILES/etc/lightdm/lightdm-gtk-greeter.conf" /etc/lightdm/
+
+sudo mkdir -p /etc/NetworkManager/dispatcher.d
+sudo cp "$FILES/etc/NetworkManager/dispatcher.d/50-packages" /etc/NetworkManager/dispatcher.d/
+sudo chmod 0755 /etc/NetworkManager/dispatcher.d/50-packages
+
+sudo cp "$FILES/home/bashrc" /root/.bashrc
+
+sudo cp "$FILES/home/vimrc" /root/.vimrc
+
+
+
+cp "$FILES/home/bashrc" ~/.bashrc
+
+cp "$FILES/home/vimrc" ~/.vimrc
