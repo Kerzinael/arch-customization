@@ -1,0 +1,22 @@
+#!/bin/bash
+
+CPU_BIAS=""
+
+for CPU_PATH in `find /sys/devices/system/cpu/ -maxdepth 1 -type d -regextype sed -regex ".*/cpu[0-9]*"`; do
+	VALUE=`cat "${CPU_PATH}/power/energy_perf_bias"`
+	if [ -z "$CPU_BIAS" ]; then
+		CPU_BIAS=$VALUE
+	else
+		[ "$VALUE" == "$CPU_BIAS" ] || CPU_BIAS=1
+	fi
+done
+
+case $CPU_BIAS in
+	0) echo "performance" ;;
+	4) echo "balance-performance" ;;
+	6) echo "normal" ;;
+	7) echo "normal" ;;
+	8) echo "balance-power" ;;
+	15) echo "power" ;;
+	*) echo "mismatch" ;;
+esac

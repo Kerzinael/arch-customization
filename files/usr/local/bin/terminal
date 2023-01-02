@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -gt 0 ]; then
+	urxvtc -title Terminal -e "$@"
+else
+	tmux ls | grep default > /dev/null
+	if [ $? -eq 0 ]; then
+		urxvtc -title Terminal -e tmux a -t default
+	else
+		urxvtc -title Terminal -e tmux new -s default -n LOCAL
+	fi
+fi

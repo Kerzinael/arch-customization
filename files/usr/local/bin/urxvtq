@@ -1,0 +1,16 @@
+#!/bin/bash
+
+wid=$(xdotool search --classname urxvtq)
+if [ -z "$wid" ]; then
+	urxvtc -name urxvtq -geometry 80x40 -e tmux new -s ">" -n LOCAL
+	wid=$(xdotool search --classname urxvtq | head -1)
+	xdotool windowfocus "$wid"
+else
+	if [ -z "$(xdotool search --onlyvisible --classname urxvtq 2>/dev/null)" ]; then
+		xdotool windowmap "$wid"
+		sleep 0.25
+		xdotool windowfocus "$wid"
+	else
+		xdotool windowunmap "$wid"
+	fi
+fi

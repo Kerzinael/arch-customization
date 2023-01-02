@@ -25,8 +25,29 @@ sudo cp "$FILES/home/bashrc" /root/.bashrc
 
 sudo cp "$FILES/home/vimrc" /root/.vimrc
 
+sudo cp "$FILES/usr/local/bin/energy-bias-hint" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/lock-manager" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/poweroff-manager" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/screencast-manager" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/screenshot-manager" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/terminal" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/urxvtq" /usr/local/bin/
+sudo chmod 0755 /usr/local/bin/*
+
+sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono Bold for Powerline.ttf" /usr/share/fonts/TTF/
+sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono Bold Oblique for Powerline.ttf" /usr/share/fonts/TTF/
+sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono for Powerline.ttf" /usr/share/fonts/TTF/
+sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono Oblique for Powerline.ttf" /usr/share/fonts/TTF/
+fc-cache -f
+
 
 
 cp "$FILES/home/bashrc" ~/.bashrc
 
 cp "$FILES/home/vimrc" ~/.vimrc
+
+mkdir -p ~/.config/autostart
+cp "$FILES/home/config/autostart/blueman.desktop" ~/.config/autostart/
+
+mkdir -p ~/.config/conky
+cp "$FILES/home/config/conky/conky.conf" ~/.config/conky/

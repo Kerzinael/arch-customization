@@ -1,0 +1,40 @@
+#!/bin/bash
+
+pidof recordmydesktop && kill -SIGTERM $(pidof recordmydesktop) && notify-send -i recordmydesktop "recordMyDesktop" "La grabación ha finalizado." && exit 0
+
+_fileName() {
+	local FOLDER="$(xdg-user-dir VIDEOS)/Capturas"
+	[ -d "$FOLDER" ] || mkdir -p "$FOLDER"
+	echo "${FOLDER}/Captura $(date +%Y%m%d%H%M%S).ogv"
+}
+
+gxmessage -title "Screencast" -name "SCREENCAST_MANAGER" -center -borderless -ontop -sticky -font "sans 14" -wrap -buttons "La _pantalla:101,Una _ventana:102,El área _seleccionada:103" -default "El área _seleccionada" -geometry 590x118 "¿Qué quiere grabar?"
+MODE=$?
+[ $MODE -eq 1 ] && exit 1
+
+gxmessage -title "Screencast" -name "SCREENCAST_MANAGER" -center -borderless -ontop -sticky -font "sans 14" -wrap -buttons "_No:100,_Sí:101" -default "_Sí" -geometry 590x118 "¿Quiere inluir audio?"
+SOUND=$?
+[ $SOUND -eq 1 ] && exit 1
+
+RMD_OPTIONS=""
+
+if [ "$MODE" == "102" ]; then
+	RMD_OPTIONS=$(slop -t 9999999 -f "--windowid %i")
+	[ $? -eq 0 ] || exit 1
+fi
+
+if [ "$MODE" == "103" ]; then
+	RMD_OPTIONS=$(slop -c 1,0,0,0.5 -f "-x %x -y %y --width %w --height %h")
+	[ $? -eq 0 ] || exit 1
+fi
+
+[ "$SOUND" == "100" ] && RMD_OPTIONS="$RMD_OPTIONS --no-sound"
+
+FILENAME="$(_fileName)"
+
+XSET_LENGTH="$(xset q | grep timeout | cut -d: -f2 | sed 's/[^0-9]//g')"
+xset s off
+
+recordmydesktop $RMD_OPTIONS -o "$FILENAME"
+
+xset s "$XSET_LENGTH"

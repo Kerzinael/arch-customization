@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo -e "  ¿Estás seguro de que quieres apagar el equipo?\n  Recuerda guardar tu trabajo antes de irte." | gxmessage -title "Apagado" -name "POWEROFF_MANAGER" -center -borderless -ontop -sticky -font "sans 14" -wrap -buttons "_Apagar:2,_Reiniciar:3,_Suspender:4,_Cerrar sesión:5" -default "_Apagar" -geometry 512x144 -file -
+
+case $? in
+	2) systemctl poweroff ;;
+	3) systemctl reboot ;;
+	4) systemctl suspend ;;
+	5) openbox --exit ;;
+esac

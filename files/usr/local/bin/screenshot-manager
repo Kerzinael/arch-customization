@@ -1,0 +1,20 @@
+#!/bin/bash
+
+_fileName() {
+	local FOLDER="$(xdg-user-dir PICTURES)/Capturas"
+	[ -d "$FOLDER" ] || mkdir -p "$FOLDER"
+	echo "${FOLDER}/Captura $(date +%Y%m%d%H%M%S).png"
+}
+
+_notify() {
+	notify-send -i camera-photo "<b>Captura realizada</b>" "La captura se ha guardado en<br/>$1"
+}
+
+if [ $# -gt 0 ]; then
+	case $1 in
+		full) FILENAME="$(_fileName)" && maim "$FILENAME" && _notify "$FILENAME" ;;
+		area) maim -u -s -c 1,0,0,0.5 /tmp/screenshot.png && FILENAME="$(_fileName)" && mv /tmp/screenshot.png "$FILENAME" && _notify "$FILENAME" ;;
+		window) maim -u -s -t 9999999 /tmp/screenshot.png && FILENAME="$(_fileName)" && mv /tmp/screenshot.png "$FILENAME" && _notify "$FILENAME" ;;
+		clipboard) maim -u -s -c 1,0,0,0.5 | xclip -selection clipboard -t image/png -i && notify-send -i camera-photo "<b>Captura realizada</b>" "La captura se ha guardado en el portapapeles"
+	esac
+fi
