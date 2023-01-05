@@ -91,6 +91,12 @@ cp "$FILES/home/notify-osd" ~/.notify-osd
 
 cp "$FILES/home/gmrunrc" ~/.gmrunrc
 
+mkdir -p ~/.config/gsimplecal
+cp "$FILES/home/config/gsimplecal/config" ~/.config/gsimplecal/
+
+mkdir -p ~/.config/parcellite
+cp "$FILES/home/config/parcellite/parcelliterc" ~/.config/parcellite/
+
 mkdir -p ~/.config/zim
 cp "$FILES/home/config/zim/preferences.conf" ~/.config/zim/
 

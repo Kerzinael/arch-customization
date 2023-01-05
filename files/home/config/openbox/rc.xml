@@ -893,7 +893,7 @@
 			<shade>no</shade>
 			<position force="yes">
 				<x>-0</x>
-				<y>-31</y>
+				<y>-0</y>
 				<monitor>mouse</monitor>
 			</position>
 			<focus>yes</focus>
