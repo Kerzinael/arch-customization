@@ -45,11 +45,6 @@
 	</menu>
 	
 	<menu id="development-menu" label="Desarrollo">
-		<item label="DBeaver" icon="/usr/share/icons/Tela-dark/scalable/apps/dbeaver.svg">
-			<action name="Execute">
-				<command>dbeaver</command>
-			</action>
-		</item>
 		<item label="Geany" icon="/usr/share/icons/Tela-dark/scalable/apps/geany.svg">
 			<action name="Execute">
 				<command>geany</command>
@@ -112,11 +107,6 @@
 		<item label="Reproductor multimedia" icon="/usr/share/icons/Tela-dark/scalable/apps/mpv.svg">
 			<action name="Execute">
 				<command>mpv --player-operation-mode=pseudo-gui</command>
-			</action>
-		</item>
-		<item label="Spotify" icon="/usr/share/icons/Tela-dark/scalable/apps/spotify.svg">
-			<action name="Execute">
-				<command>spotify</command>
 			</action>
 		</item>
 	</menu>
@@ -203,11 +193,6 @@
 			<action name="Execute">
 				<command>postman</command>
 			 </action>
-		</item>
-		<item label="Spotify" icon="/usr/share/icons/Tela-dark/scalable/apps/spotify.svg">
-			<action name="Execute">
-				<command>spotify</command>
-			</action>
 		</item>
 		<item label="Zim" icon="/usr/share/icons/Tela-dark/scalable/apps/zim.svg">
 			<action name="Execute">
