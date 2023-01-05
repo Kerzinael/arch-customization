@@ -1,0 +1,98 @@
+!*** Solarized Dark ***!
+
+#define S_base03		#002B36
+#define S_base02		#073642
+#define S_base01		#586E75
+#define S_base00		#657B83
+#define S_base0			#839496
+#define S_base1			#93A1A1
+#define S_base2			#EEE8D5
+#define S_base3			#FDF6E3
+#define	S_yellow		#B58900
+#define S_orange		#CB4B16
+#define S_red			#DC322F
+#define S_magenta		#D33682
+#define S_violet		#6C71C4
+#define S_blue			#268BD2
+#define S_cyan			#2AA198
+#define S_green			#859900
+
+
+
+!*** Xft ***!
+
+Xft.dpi:				96
+Xft.antialias:			true
+Xft.hinting:			true
+Xft.hintstyle:			hintfull
+Xft.rgba:				rgb
+Xft.lcdfilter:			lcddefault
+
+
+
+!*** URxvt ***!
+
+! Colores
+URxvt.background:		S_base03
+URxvt.foreground:		S_base0
+URxvt.cursorColor:		S_base1
+URxvt.fadeColor:		S_base03
+URxvt.colorUL:			S_yellow
+URxvt.underlineColor:	S_yellow
+URxvt.color0:			S_base02
+URxvt.color1:			S_red
+URxvt.color2:			S_green
+URxvt.color3:			S_yellow
+URxvt.color4:			S_blue
+URxvt.color5:			S_magenta
+URxvt.color6:			S_cyan
+URxvt.color7:			S_base2
+URxvt.color8:			S_base03
+URxvt.color9:			S_red
+URxvt.color10:			S_green
+URxvt.color11:			S_yellow
+URxvt.color12:			S_blue
+URxvt.color13:			S_magenta
+URxvt.color14:			S_cyan
+URxvt.color15:			S_base3
+
+
+! Fuentes
+URxvt.boldFont:			xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16
+URxvt.font:				xft:DejaVu Sans Mono for Powerline:pixelsize=16
+
+! Opciones
+URxvt.depth:			32
+URxvt.buffered:			true
+URxvt.cursorBlink:		true
+URxvt.geometry:			80x24
+URxvt.loginShell:		true
+URxvt.cutchars:			BACKSLASH `"'&()*,;<=>?@[]^{|}:"
+URxvt.fading:			20
+URxvt.title:			Terminal
+URxvt.iconFile:			/usr/share/icons/Tela-dark/scalable/apps/terminal.svg
+URxvt.iso14755:			false
+URxvt.iso14755_52:		false
+URxvt.saveLines:		0
+URxvt.pastableTabs:		true
+URxvt.perl-ext:
+URxvt.perl-ext-common:	default,selection-autotransform
+URxvt.scrollBar:		false
+URxvt.scrollTtyKeypress:	true
+URxvt.scrollTtyOutput:		false
+URxvt.scrollWithBuffer:		false
+URxvt.skipScroll:			true
+URxvt.selection-autotransform.0:	s/ +$//gm
+
+! Atajos
+URxvt.keysym.C-A-0:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=16\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16\007
+URxvt.keysym.C-A-1:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=18\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18\007
+URxvt.keysym.C-A-2:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=20\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=20\007
+URxvt.keysym.C-A-3:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=22\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=22\007
+URxvt.keysym.C-A-4:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=24\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=24\007
+URxvt.keysym.C-A-5:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=28\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=28\007
+URxvt.keysym.C-A-6:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=32\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=32\007
+URxvt.keysym.C-A-7:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=36\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=36\007
+URxvt.keysym.C-A-8:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=40\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=40\007
+URxvt.keysym.C-A-9:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=48\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=48\007
+

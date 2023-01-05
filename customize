@@ -40,8 +40,6 @@ sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono for Powerline.ttf" /usr/sha
 sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono Oblique for Powerline.ttf" /usr/share/fonts/TTF/
 fc-cache -f
 
-
-
 cp "$FILES/home/bashrc" ~/.bashrc
 
 cp "$FILES/home/vimrc" ~/.vimrc
@@ -51,3 +49,77 @@ cp "$FILES/home/config/autostart/blueman.desktop" ~/.config/autostart/
 
 mkdir -p ~/.config/conky
 cp "$FILES/home/config/conky/conky.conf" ~/.config/conky/
+
+cp "$FILES/home/config/chrome-flags.conf" ~/.config/
+
+cp "$FILES/home/config/openbox/autostart" ~/.config/openbox/
+sudo chmod 0755 ~/.config/openbox/autostart
+cp "$FILES/home/config/openbox/environment" ~/.config/openbox/
+sudo chmod 0755 ~/.config/openbox/environment
+cp "$FILES/home/config/openbox/menu.xml" ~/.config/openbox/
+cp "$FILES/home/config/openbox/rc.xml" ~/.config/openbox/
+
+mkdir -p ~/.config/picom
+cp "$FILES/home/config/picom/picom.conf" ~/.config/picom/
+
+mkdir -p ~/.config/geany/colorschemes
+cp "$FILES/home/config/geany/colorschemes/darcula.conf" ~/.config/geany/colorschemes/
+
+cp "$FILES/home/config/mimeapps.list" ~/.config/
+
+cp "$FILES/home/config/mpv/input.conf" ~/.config/mpv/
+cp "$FILES/home/config/mpv/mpv.conf" ~/.config/mpv/
+
+mkdir -p ~/.config/tint2
+cp "$FILES/home/config/tint2/tint2panel" ~/.config/tint2/
+
+mkdir -p ~/.config/viewnior
+cp "$FILES/home/config/viewnior/viewnior.conf" ~/.config/viewnior/
+
+mkdir -p ~/.config/xarchiver
+cp "$FILES/home/config/xarchiver/xarchiverrc" ~/.config/xarchiver/
+
+mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml
+cp "$FILES/home/config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml" ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+cp "$FILES/home/config/xfce4/xfconf/xfce-perchannel-xml/thunar-volman.xml" ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+
+cp "$FILES/home/Xresources" ~/.Xresources
+
+cp "$FILES/home/tmux.conf" ~/.tmux.conf
+
+cp "$FILES/home/notify-osd" ~/.notify-osd
+
+cp "$FILES/home/gmrunrc" ~/.gmrunrc
+
+mkdir -p ~/.config/zim
+cp "$FILES/home/config/zim/preferences.conf" ~/.config/zim/
+
+code --install-extension alefragnani.project-manager > /dev/null 2> /dev/null
+code --install-extension christian-kohler.path-intellisense > /dev/null 2> /dev/null
+code --install-extension dbaeumer.vscode-eslint > /dev/null 2> /dev/null
+code --install-extension eg2.vscode-npm-script > /dev/null 2> /dev/null
+code --install-extension esbenp.prettier-vscode > /dev/null 2> /dev/null
+code --install-extension formulahendry.auto-close-tag > /dev/null 2> /dev/null
+code --install-extension formulahendry.auto-rename-tag > /dev/null 2> /dev/null
+code --install-extension kisstkondoros.vscode-gutter-preview > /dev/null 2> /dev/null
+code --install-extension mikestead.dotenv > /dev/null 2> /dev/null
+code --install-extension mrmlnc.vscode-pugbeautify > /dev/null 2> /dev/null
+code --install-extension mrmlnc.vscode-scss > /dev/null 2> /dev/null
+code --install-extension MS-CEINTL.vscode-language-pack-es > /dev/null 2> /dev/null
+code --install-extension naumovs.color-highlight > /dev/null 2> /dev/null
+code --install-extension naumovs.theme-oceanicnext > /dev/null 2> /dev/null
+code --install-extension PKief.material-icon-theme > /dev/null 2> /dev/null
+code --install-extension pmneo.tsimporter > /dev/null 2> /dev/null
+code --install-extension quicktype.quicktype > /dev/null 2> /dev/null
+code --install-extension rangav.vscode-thunder-client > /dev/null 2> /dev/null
+code --install-extension Rubymaniac.vscode-paste-and-indent > /dev/null 2> /dev/null
+code --install-extension ryanolsonx.solarized > /dev/null 2> /dev/null
+code --install-extension usernamehw.errorlens > /dev/null 2> /dev/null
+code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples > /dev/null 2> /dev/null
+code --install-extension VisualStudioExptTeam.vscodeintellicode > /dev/null 2> /dev/null
+code --install-extension wayou.vscode-todo-highlight > /dev/null 2> /dev/null
+code --install-extension zhuangtongfa.material-theme > /dev/null 2> /dev/null
+code --install-extension Zignd.html-css-class-completion > /dev/null 2> /dev/null
+mkdir -p ~/.config/Code/User
+cp "$FILES/home/config/Code/User/settings.json" ~/.config/Code/User/
+cp "$FILES/home/config/Code/User/keybindings.json" ~/.config/Code/User/

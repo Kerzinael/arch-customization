@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="accessories-menu" label="Accesorios">
+		<item label="Geany" icon="/usr/share/icons/Tela-dark/scalable/apps/geany.svg">
+			<action name="Execute">
+				<command>geany</command>
+			</action>
+		</item>
+		<item label="Meld" icon="/usr/share/icons/Tela-dark/scalable/apps/meld.svg">
+			<action name="Execute">
+				<command>meld</command>
+			</action>
+		</item>
+		<item label="Qalculate!" icon="/usr/share/icons/Tela-dark/scalable/apps/qalculate-gtk.svg">
+			<action name="Execute">
+				<command>qalculate-gtk</command>
+			</action>
+		</item>
+		<item label="Seahorse" icon="/usr/share/icons/Tela-dark/scalable/apps/seahorse.svg">
+			<action name="Execute">
+				<command>seahorse</command>
+			</action>
+		</item>
+		<item label="Terminal" icon="/usr/share/icons/Tela-dark/scalable/apps/terminal.svg">
+			<action name="Execute">
+				<command>terminal</command>
+			</action>
+		</item>
+		<item label="Thunar" icon="/usr/share/icons/Tela-dark/scalable/apps/thunar.svg">
+			<action name="Execute">
+				<command>thunar</command>
+			</action>
+		</item>
+		<item label="Xarchiver" icon="/usr/share/icons/Tela-dark/scalable/apps/xarchiver.svg">
+			<action name="Execute">
+				<command>xarchiver</command>
+			</action>
+		</item>
+		<item label="Zim" icon="/usr/share/icons/Tela-dark/scalable/apps/zim.svg">
+			<action name="Execute">
+				<command>zim</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="development-menu" label="Desarrollo">
+		<item label="DBeaver" icon="/usr/share/icons/Tela-dark/scalable/apps/dbeaver.svg">
+			<action name="Execute">
+				<command>dbeaver</command>
+			</action>
+		</item>
+		<item label="Geany" icon="/usr/share/icons/Tela-dark/scalable/apps/geany.svg">
+			<action name="Execute">
+				<command>geany</command>
+			</action>
+		</item>
+		<item label="Meld" icon="/usr/share/icons/Tela-dark/scalable/apps/meld.svg">
+			<action name="Execute">
+				<command>meld</command>
+			</action>
+		</item>
+		<item label="MongoDB Compass" icon="/usr/share/icons/Tela-dark/scalable/apps/mongodb-compass.svg">
+			<action name="Execute">
+				<command>mongodb-compass</command>
+			</action>
+		</item>
+		<item label="Postman" icon="/usr/share/icons/Tela-dark/scalable/apps/postman.svg">
+			<action name="Execute">
+				<command>postman</command>
+			</action>
+		</item>
+		<item label="Visual Studio Code" icon="/usr/share/icons/Tela-dark/scalable/apps/visualstudiocode.svg">
+			<action name="Execute">
+				<command>code</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="graphics-menu" label="Gráficos">
+		<item label="GIMP" icon="/usr/share/icons/Tela-dark/scalable/apps/gimp.svg">
+			<action name="Execute">
+				<command>gimp</command>
+			</action>
+		</item>
+		<item label="Viewnior" icon="/usr/share/icons/Tela-dark/scalable/apps/viewnior.svg">
+			<action name="Execute">
+				<command>viewnior</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="internet-menu" label="Internet">
+		<item label="Google Chrome" icon="/usr/share/icons/Tela-dark/scalable/apps/google-chrome.svg">
+			<action name="Execute">
+				<command>google-chrome-stable</command>
+			</action>
+		</item>
+		<item label="Transmission" icon="/usr/share/icons/Tela-dark/scalable/apps/transmission-gtk.svg">
+			<action name="Execute">
+				<command>transmission-gtk</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="multimedia-menu" label="Multimedia">
+		<item label="Control de volumen" icon="/usr/share/icons/Tela-dark/scalable/apps/pavucontrol.svg">
+			<action name="Execute">
+				<command>pavucontrol</command>
+			</action>
+		</item>
+		<item label="Reproductor multimedia" icon="/usr/share/icons/Tela-dark/scalable/apps/mpv.svg">
+			<action name="Execute">
+				<command>mpv --player-operation-mode=pseudo-gui</command>
+			</action>
+		</item>
+		<item label="Spotify" icon="/usr/share/icons/Tela-dark/scalable/apps/spotify.svg">
+			<action name="Execute">
+				<command>spotify</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="office-menu" label="Oficina">
+		<item label="Evince" icon="/usr/share/icons/Tela-dark/scalable/apps/evince.svg">
+			<action name="Execute">
+				<command>evince</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="system-menu" label="Sistema">
+		<item label="Reconfigurar Openbox" icon="/usr/share/icons/Tela-dark/scalable/apps/openbox.svg">
+			<action name="Reconfigure" />
+		</item>
+		<separator />
+		<item label="Bluetooth" icon="/usr/share/icons/Tela-dark/scalable/apps/preferences-system-bluetooth.svg">
+			<action name="Execute">
+				<command>blueman-manager</command>
+			</action>
+		</item>
+		<item label="Configurar Openbox" icon="/usr/share/icons/Tela-dark/scalable/apps/obconf.svg">
+			<action name="Execute">
+				<command>obconf</command>
+			</action>
+		</item>
+		<item label="LightDM" icon="/usr/share/icons/Tela-dark/scalable/apps/lightdm-gtk-greeter-settings.svg">
+			<action name="Execute">
+				<command>pkexec lightdm-gtk-greeter-settings</command>
+			</action>
+		</item>
+		<item label="Monitores y resolución" icon="/usr/share/icons/Tela-dark/scalable/apps/preferences-desktop-display.svg">
+			<action name="Execute">
+				<command>arandr</command>
+			</action>
+		</item>
+		<item label="Teclado y ratón" icon="/usr/share/icons/Tela-dark/scalable/apps/preferences-desktop-peripherals.svg">
+			<action name="Execute">
+				<command>lxinput</command>
+			</action>
+		</item>
+		<item label="Temas y ventanas" icon="/usr/share/icons/Tela-dark/scalable/apps/preferences-desktop-theme.svg">
+			<action name="Execute">
+				<command>lxappearance</command>
+			</action>
+		</item>
+	</menu>
+	
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="Favoritos" />
+		<item label="Terminal" icon="/usr/share/icons/Tela-dark/scalable/apps/terminal.svg">
+			<action name="Execute">
+				<command>terminal</command>
+			</action>
+		</item>
+		<item label="Thunar" icon="/usr/share/icons/Tela-dark/scalable/apps/thunar.svg">
+			<action name="Execute">
+				<command>thunar</command>
+			</action>
+		</item>
+		<separator />
+		<item label="Code" icon="/usr/share/icons/Tela-dark/scalable/apps/visualstudiocode.svg">
+			<action name="Execute">
+				<command>code</command>
+			</action>
+		</item>
+		<item label="Compass" icon="/usr/share/icons/Tela-dark/scalable/apps/mongodb-compass.svg">
+			<action name="Execute">
+				<command>mongodb-compass</command>
+			</action>
+		</item>
+		<item label="Geany" icon="/usr/share/icons/Tela-dark/scalable/apps/geany.svg">
+			<action name="Execute">
+				<command>geany</command>
+			</action>
+		</item>
+		<item label="Google Chrome" icon="/usr/share/icons/Tela-dark/scalable/apps/google-chrome.svg">
+			<action name="Execute">
+				<command>google-chrome-stable</command>
+			</action>
+		</item>
+		<item label="Postman" icon="/usr/share/icons/Tela-dark/scalable/apps/postman.svg">
+			<action name="Execute">
+				<command>postman</command>
+			 </action>
+		</item>
+		<item label="Spotify" icon="/usr/share/icons/Tela-dark/scalable/apps/spotify.svg">
+			<action name="Execute">
+				<command>spotify</command>
+			</action>
+		</item>
+		<item label="Zim" icon="/usr/share/icons/Tela-dark/scalable/apps/zim.svg">
+			<action name="Execute">
+				<command>zim</command>
+			</action>
+		</item>
+		<separator label="Aplicaciones" />
+		<menu id="accessories-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-accessories.svg" />
+		<menu id="development-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-development.svg" />
+		<menu id="graphics-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-graphics.svg" />
+		<menu id="internet-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-internet.svg" />
+		<menu id="multimedia-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-multimedia.svg" />
+		<menu id="office-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-office.svg" />
+		<separator label="Sistema" />
+		<menu id="system-menu" icon="/usr/share/icons/Tela-dark/scalable/apps/applications-system.svg" />
+		<separator />
+		<item label="Apagado" icon="/usr/share/icons/Tela-dark/scalable/apps/system-shutdown.svg">
+			<action name="Execute">
+				<command>poweroff-manager</command>
+			 </action>
+		 </item>
+	</menu>
+</openbox_menu>

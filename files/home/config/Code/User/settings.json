@@ -1,0 +1,136 @@
+{
+	////////////////////////
+	// VISUAL STUDIO CODE //
+	////////////////////////
+
+	// Appearance
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.statusBar.visible": true,
+	"workbench.activityBar.visible": true,
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#333333",
+		"statusBar.noFolderBackground": "#333333",
+		"statusBar.debuggingBackground": "#263238"
+	},
+	"workbench.editor.wrapTabs": true,
+	"workbench.tree.indent": 20,
+	"workbench.tree.renderIndentGuides": "always",
+	"editor.minimap.enabled": false,
+	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 18,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.formatOnSave": false,
+	"editor.suggestSelection": "first",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"debug.javascript.autoAttachFilter": "onlyWithFlag",
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"extensions.ignoreRecommendations": true,
+
+	// Behaviour
+	"files.autoSave": "off",
+
+	// Explorer
+	"explorer.autoReveal": false,
+	"explorer.compactFolders": false,
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+	"files.exclude": {
+		"node_modules/": true
+	},
+
+	// GIT
+	"git.branchSortOrder": "alphabetically",
+
+	// Validation
+	"css.validate": false,
+	"scss.validate": false,
+	"less.validate": false,
+
+	// Zen mode
+	"zenMode.centerLayout": false,
+	"zenMode.hideTabs": false,
+	"zenMode.hideLineNumbers": false,
+
+	////////////////
+	// EXTENSIONS //
+	////////////////
+
+	// Auto Close Tag
+	"auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+	"auto-close-tag.disableOnLanguage": ["typescript"],
+
+	// ESLint
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.validate": ["typescript", "typescriptreact"],
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+
+	// IntelliCode
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+	// Path Intellisense
+	"path-intellisense.autoSlashAfterDirectory": true,
+	"path-intellisense.autoTriggerNextSuggestion": true,
+
+	// Prettier
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "none",
+	"prettier.printWidth": 80,
+	"prettier.arrowParens": "avoid",
+	"prettier.proseWrap": "never",
+	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSameLine": true,
+
+	// TODO Highlight
+	"todohighlight.isEnable": true,
+	"todohighlight.isCaseSensitive": true,
+	"todohighlight.keywords": [
+		{
+			"text": "// TODO",
+			"borderColor": "rgba(255,0,0,.75)",
+			"backgroundColor": "rgba(255,0,0,.5)"
+		},
+		{
+			"text": "// FIXME",
+			"borderColor": "rgba(255,127,0,.75)",
+			"backgroundColor": "rgba(255,127,0,.5)"
+		},
+		{
+			"text": "// BUG",
+			"borderColor": "rgba(255,35,123,.75)",
+			"backgroundColor": "rgba(255,35,123,.5)"
+		}
+	],
+	"todohighlight.defaultStyle": {
+		"color": "white",
+		"fontWeight": "700",
+		"backgroundColor": "#ffab00",
+		"overviewRulerColor": "#ffab00",
+		"cursor": "pointer",
+		"border": "2px solid #eee",
+		"borderRadius": "2px",
+		"isWholeLine": false
+	},
+
+	// TypeScript Importer
+	"tsimporter.emitSemicolon": false,
+	"window.zoomLevel": 1
+}

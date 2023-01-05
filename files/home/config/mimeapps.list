@@ -1,0 +1,20 @@
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop
+application/x-bittorrent=transmission-gtk.desktop
+image/jpeg=viewnior.desktop
+image/png=viewnior.desktop
+text/html=google-chrome.desktop
+text/plain=geany.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/magnet=transmission-gtk.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/webcal=google-chrome.desktop
+
+[Added Associations]
+x-scheme-handler/http=google-chrome.desktop;
+x-scheme-handler/https=google-chrome.desktop;
+application/x-compressed-tar=xarchiver.desktop;
+application/x-shellscript=geany.desktop;
