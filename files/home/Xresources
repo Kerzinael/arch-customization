@@ -56,7 +56,6 @@ URxvt.color13:			S_magenta
 URxvt.color14:			S_cyan
 URxvt.color15:			S_base3
 
-
 ! Fuentes
 URxvt.boldFont:			xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16
 URxvt.font:				xft:DejaVu Sans Mono for Powerline:pixelsize=16
@@ -66,6 +65,7 @@ URxvt.depth:			32
 URxvt.buffered:			true
 URxvt.cursorBlink:		true
 URxvt.geometry:			80x24
+URxvt.refreshRate:		0
 URxvt.loginShell:		true
 URxvt.cutchars:			BACKSLASH `"'&()*,;<=>?@[]^{|}:"
 URxvt.fading:			20
@@ -95,4 +95,3 @@ URxvt.keysym.C-A-6:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsi
 URxvt.keysym.C-A-7:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=36\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=36\007
 URxvt.keysym.C-A-8:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=40\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=40\007
 URxvt.keysym.C-A-9:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=48\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=48\007
-
