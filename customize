@@ -20,6 +20,8 @@ sudo cp "$FILES/etc/lightdm/lightdm-gtk-greeter.conf" /etc/lightdm/
 sudo mkdir -p /etc/NetworkManager/dispatcher.d
 sudo cp "$FILES/etc/NetworkManager/dispatcher.d/50-packages" /etc/NetworkManager/dispatcher.d/
 sudo chmod 0755 /etc/NetworkManager/dispatcher.d/50-packages
+sudo cp "$FILES/etc/NetworkManager/dispatcher.d/90-open_captive_portal" /etc/NetworkManager/dispatcher.d/
+sudo chmod 0755 /etc/NetworkManager/dispatcher.d/90-open_captive_portal
 
 sudo cp "$FILES/home/bashrc" /root/.bashrc
 
