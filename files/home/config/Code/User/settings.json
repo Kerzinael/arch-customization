@@ -32,9 +32,12 @@
 	"debug.javascript.autoAttachFilter": "onlyWithFlag",
 	"terminal.integrated.defaultProfile.linux": "bash",
 	"extensions.ignoreRecommendations": true,
+	"window.zoomLevel": 1,
 
 	// Behaviour
 	"files.autoSave": "off",
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.format.semicolons": "remove",
 
 	// Explorer
 	"explorer.autoReveal": false,
@@ -42,7 +45,8 @@
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.expand": false,
 	"files.exclude": {
-		"node_modules/": true
+		"node_modules/": true,
+		".vscode/": true
 	},
 
 	// GIT
@@ -74,11 +78,16 @@
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
+
+	// Indent Rainbow
+	"indentRainbow.excludedLanguages": [
+		"plaintext"
+	],
 
 	// IntelliCode
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -98,6 +107,16 @@
 	"prettier.proseWrap": "never",
 	"prettier.jsxSingleQuote": true,
 	"prettier.bracketSameLine": true,
+
+	// Python
+	"python.defaultInterpreterPath": "/bin/python",
+	"python.linting.flake8Enabled": true,
+	"python.linting.enabled": true,
+	"python.formatting.provider": "black",
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"vsintellicode.features.python.deepLearning": "enabled",
 
 	// TODO Highlight
 	"todohighlight.isEnable": true,
@@ -131,6 +150,5 @@
 	},
 
 	// TypeScript Importer
-	"tsimporter.emitSemicolon": false,
-	"window.zoomLevel": 1
+	"tsimporter.emitSemicolon": false
 }
