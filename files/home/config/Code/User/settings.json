@@ -35,6 +35,7 @@
 	"window.zoomLevel": 1,
 
 	// Behaviour
+	"editor.linkedEditing": true,
 	"files.autoSave": "off",
 	"typescript.preferences.quoteStyle": "single",
 	"typescript.format.semicolons": "remove",
@@ -107,16 +108,6 @@
 	"prettier.proseWrap": "never",
 	"prettier.jsxSingleQuote": true,
 	"prettier.bracketSameLine": true,
-
-	// Python
-	"python.defaultInterpreterPath": "/bin/python",
-	"python.linting.flake8Enabled": true,
-	"python.linting.enabled": true,
-	"python.formatting.provider": "black",
-	"[python]": {
-		"editor.defaultFormatter": "ms-python.black-formatter"
-	},
-	"vsintellicode.features.python.deepLearning": "enabled",
 
 	// TODO Highlight
 	"todohighlight.isEnable": true,
