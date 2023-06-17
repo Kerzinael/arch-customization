@@ -57,3 +57,8 @@ man() {
 	man "$@"
 }
 
+alias kubectl=kubecolor
+alias k=kubecolor
+. /usr/share/bash-completion/completions/kubectl
+complete -o default -F __start_kubectl kubecolor k
+

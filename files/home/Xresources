@@ -57,8 +57,8 @@ URxvt.color14:			S_cyan
 URxvt.color15:			S_base3
 
 ! Fuentes
-URxvt.boldFont:			xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16
-URxvt.font:				xft:DejaVu Sans Mono for Powerline:pixelsize=16
+URxvt.boldFont:			xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16,xft:Noto Color Emoji:bold:pixelsize=16
+URxvt.font:				xft:DejaVu Sans Mono for Powerline:pixelsize=16,xft:Noto Color Emoji:pixelsize=16
 
 ! Opciones
 URxvt.depth:			32
@@ -85,13 +85,13 @@ URxvt.skipScroll:			true
 URxvt.selection-autotransform.0:	s/ +$//gm
 
 ! Atajos
-URxvt.keysym.C-A-0:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=16\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16\007
-URxvt.keysym.C-A-1:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=18\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18\007
-URxvt.keysym.C-A-2:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=20\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=20\007
-URxvt.keysym.C-A-3:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=22\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=22\007
-URxvt.keysym.C-A-4:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=24\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=24\007
-URxvt.keysym.C-A-5:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=28\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=28\007
-URxvt.keysym.C-A-6:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=32\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=32\007
-URxvt.keysym.C-A-7:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=36\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=36\007
-URxvt.keysym.C-A-8:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=40\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=40\007
-URxvt.keysym.C-A-9:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=48\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=48\007
+URxvt.keysym.C-A-0:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=16,xft:Noto Color Emoji:pixelsize=16\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=16,xft:Noto Color Emoji:bold:pixelsize=16\007
+URxvt.keysym.C-A-1:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=18,xft:Noto Color Emoji:pixelsize=18\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=18,xft:Noto Color Emoji:bold:pixelsize=18\007
+URxvt.keysym.C-A-2:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=20,xft:Noto Color Emoji:pixelsize=20\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=20,xft:Noto Color Emoji:bold:pixelsize=20\007
+URxvt.keysym.C-A-3:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=22,xft:Noto Color Emoji:pixelsize=22\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=22,xft:Noto Color Emoji:bold:pixelsize=22\007
+URxvt.keysym.C-A-4:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=24,xft:Noto Color Emoji:pixelsize=24\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=24,xft:Noto Color Emoji:bold:pixelsize=24\007
+URxvt.keysym.C-A-5:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=28,xft:Noto Color Emoji:pixelsize=28\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=28,xft:Noto Color Emoji:bold:pixelsize=28\007
+URxvt.keysym.C-A-6:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=32,xft:Noto Color Emoji:pixelsize=32\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=32,xft:Noto Color Emoji:bold:pixelsize=32\007
+URxvt.keysym.C-A-7:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=36,xft:Noto Color Emoji:pixelsize=36\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=36,xft:Noto Color Emoji:bold:pixelsize=36\007
+URxvt.keysym.C-A-8:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=40,xft:Noto Color Emoji:pixelsize=40\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=40,xft:Noto Color Emoji:bold:pixelsize=40\007
+URxvt.keysym.C-A-9:		command:\033]710;xft:DejaVu Sans Mono for Powerline:pixelsize=48,xft:Noto Color Emoji:pixelsize=48\007\033]711;xft:DejaVu Sans Mono for Powerline:bold:pixelsize=48,xft:Noto Color Emoji:bold:pixelsize=48\007
