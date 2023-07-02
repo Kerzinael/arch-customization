@@ -86,9 +86,7 @@
 	},
 
 	// Indent Rainbow
-	"indentRainbow.excludedLanguages": [
-		"plaintext"
-	],
+	"indentRainbow.excludedLanguages": ["plaintext"],
 
 	// IntelliCode
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -141,5 +139,14 @@
 	},
 
 	// TypeScript Importer
-	"tsimporter.emitSemicolon": false
+	"tsimporter.emitSemicolon": false,
+
+	// YAML
+	"redhat.telemetry.enabled": true,
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"yaml.customTags": [
+		"!Ref"
+	]
 }
