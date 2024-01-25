@@ -207,3 +207,13 @@ tooltip_background_id = 5
 tooltip_font = Droid Sans 12
 tooltip_font_color = #bbbbbb 100
 
+#-------------------------------------
+# Executor: caps lock
+execp = new
+execp_name = capslock
+execp_command = setxkbmap -query | grep ctrl:nocaps > /dev/null && echo /usr/share/icons/Tela/24/panel/caps-lock-off.svg || echo /usr/share/icons/Tela/24/panel/caps-lock-on.svg
+execp_interval = 30
+execp_has_icon = 1
+execp_cache_icon = 0
+execp_background_id = 1
+execp_lclick_command = setxkbmap -query | grep ctrl:nocaps > /dev/null && setxkbmap -option || setxkbmap -option ctrl:nocaps

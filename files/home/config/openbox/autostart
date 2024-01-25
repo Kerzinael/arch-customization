@@ -19,6 +19,7 @@
 xwallpaper --daemon --zoom /usr/share/pixmaps/wallpaper
 lxpolkit &
 picom -bc
+setxkbmap -option ctrl:nocaps
 tint2 -c $HOME/.config/tint2/tint2panel &
 urxvtd -q -o -f
 thunar --daemon &
