@@ -25,4 +25,3 @@ urxvtd -q -o -f
 thunar --daemon &
 xset s 900
 xss-lock lock-manager &
-conky --daemonize --pause=5 &
