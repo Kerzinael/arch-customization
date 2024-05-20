@@ -7,7 +7,6 @@
 	"workbench.colorTheme": "One Dark Pro",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.statusBar.visible": true,
-	"workbench.activityBar.visible": true,
 	"workbench.colorCustomizations": {
 		"statusBar.background": "#333333",
 		"statusBar.noFolderBackground": "#333333",
@@ -32,7 +31,6 @@
 	"debug.javascript.autoAttachFilter": "onlyWithFlag",
 	"terminal.integrated.defaultProfile.linux": "bash",
 	"extensions.ignoreRecommendations": true,
-	"window.zoomLevel": 1,
 
 	// Behaviour
 	"editor.linkedEditing": true,
@@ -60,7 +58,6 @@
 
 	// Zen mode
 	"zenMode.centerLayout": false,
-	"zenMode.hideTabs": false,
 	"zenMode.hideLineNumbers": false,
 
 	////////////////
@@ -76,10 +73,10 @@
 	"eslint.lintTask.enable": true,
 	"eslint.validate": ["typescript", "typescriptreact"],
 	"[javascript]": {
-		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -164,7 +161,9 @@
 		"!Select sequence",
 		"!Split sequence",
 		"!Sub scalar",
+		"!Sub sequence",
 		"!Transform mapping",
 		"!Ref scalar"
-	]
+	],
+	"window.zoomLevel": 1
 }

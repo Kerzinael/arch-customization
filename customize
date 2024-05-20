@@ -121,6 +121,7 @@ code --install-extension MS-CEINTL.vscode-language-pack-es > /dev/null 2> /dev/n
 code --install-extension naumovs.color-highlight > /dev/null 2> /dev/null
 code --install-extension naumovs.theme-oceanicnext > /dev/null 2> /dev/null
 code --install-extension oderwat.indent-rainbow > /dev/null 2> /dev/null
+code --install-extension pflannery.vscode-versionlens > /dev/null 2> /dev/null
 code --install-extension PKief.material-icon-theme > /dev/null 2> /dev/null
 code --install-extension pmneo.tsimporter > /dev/null 2> /dev/null
 code --install-extension quicktype.quicktype > /dev/null 2> /dev/null
