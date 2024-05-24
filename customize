@@ -34,6 +34,7 @@ sudo cp "$FILES/usr/local/bin/screencast-manager" /usr/local/bin/
 sudo cp "$FILES/usr/local/bin/screenshot-manager" /usr/local/bin/
 sudo cp "$FILES/usr/local/bin/terminal" /usr/local/bin/
 sudo cp "$FILES/usr/local/bin/urxvtq" /usr/local/bin/
+sudo cp "$FILES/usr/local/bin/onetimesecret-manager" /usr/local/bin/
 sudo chmod 0755 /usr/local/bin/*
 
 sudo cp "$FILES/usr/share/fonts/TTF/DejaVu Sans Mono Bold for Powerline.ttf" /usr/share/fonts/TTF/

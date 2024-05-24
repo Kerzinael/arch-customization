@@ -207,3 +207,17 @@ tooltip_background_id = 5
 tooltip_font = Droid Sans 12
 tooltip_font_color = #bbbbbb 100
 
+#-------------------------------------
+# Executor: caps lock
+execp = new
+execp_name = onetimesecret
+execp_command = echo /usr/share/icons/Tela/24/panel/dialog-password-panel.svg
+execp_interval = 0
+execp_has_icon = 1
+execp_cache_icon = 1
+execp_tooltip = One Time Secret
+execp_background_id = 1
+execp_padding = 6 0 0
+execp_lclick_command = onetimesecret-manager shareFromClipboard
+execp_rclick_command = onetimesecret-manager shareFromInput
+execp_mclick_command = onetimesecret-manager setup
