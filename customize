@@ -96,7 +96,8 @@ cp "$FILES/home/Xresources" ~/.Xresources
 
 cp "$FILES/home/tmux.conf" ~/.tmux.conf
 
-cp "$FILES/home/notify-osd" ~/.notify-osd
+mkdir -p ~/.config/dunst
+cp "$FILES/home/config/dunst/dunstrc" ~/.config/dunst/
 
 cp "$FILES/home/gmrunrc" ~/.gmrunrc
 
