@@ -79,14 +79,14 @@ format_limit() {
 	local color
 	color=$(color_for_usage "$pct")
 
-	local time_left="?"
+	local time_left=""
 	if [[ -n "$resets_at" && "$resets_at" != "null" ]]; then
 		local remaining
 		remaining=$(seconds_until "$resets_at")
-		time_left=$(format_remaining "$remaining")
+		time_left=" ($(format_remaining "$remaining"))"
 	fi
 
-	echo "<span color=\"${color}\">${label}: <b>${pct}%</b></span> (${time_left})"
+	echo "<span color=\"${color}\">${label}: <b>${pct}%</b></span>${time_left}"
 }
 
 main() {
