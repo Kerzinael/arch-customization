@@ -81,6 +81,8 @@ cp "$FILES/home/config/mpv/mpv.conf" ~/.config/mpv/
 
 mkdir -p ~/.config/tint2
 cp "$FILES/home/config/tint2/tint2panel" ~/.config/tint2/
+cp "$FILES/home/config/tint2/claude-usage-executor" ~/.config/tint2/
+chmod 0755 ~/.config/tint2/claude-usage-executor
 
 mkdir -p ~/.config/viewnior
 cp "$FILES/home/config/viewnior/viewnior.conf" ~/.config/viewnior/

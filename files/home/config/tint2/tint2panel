@@ -69,7 +69,7 @@ border_color_pressed = #121212 100
 
 #-------------------------------------
 # Panel
-panel_items = LTESBC
+panel_items = LTEESBC
 panel_size = 100% 36
 panel_margin = 0 0
 panel_padding = 2 0 6
@@ -208,7 +208,29 @@ tooltip_font = Droid Sans 12
 tooltip_font_color = #bbbbbb 100
 
 #-------------------------------------
-# Executor: caps lock
+# Executor: Claude
+execp = new
+execp_command = ~/.config/tint2/claude-usage-executor
+execp_interval = 120
+execp_has_icon = 0
+execp_cache_icon = 0
+execp_continuous = 0
+execp_markup = 1
+execp_tooltip = Uso de Claude
+execp_lclick_command =
+execp_rclick_command =
+execp_mclick_command =
+execp_uwheel_command =
+execp_dwheel_command =
+execp_font = Droid Sans 12
+execp_font_color = #ffffff 100
+execp_padding = 5 0
+execp_background_id = 0
+execp_centered = 1
+execp_icon_w = 0
+execp_icon_h = 0
+
+# Executor: One Time Secret
 execp = new
 execp_name = onetimesecret
 execp_command = echo /usr/share/icons/Tela/24/panel/dialog-password-panel.svg

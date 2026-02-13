@@ -1,0 +1,134 @@
+#!/bin/bash
+
+set -euo pipefail
+
+readonly CREDENTIALS_PATH="$HOME/.claude/.credentials.json"
+readonly USAGE_ENDPOINT="https://api.anthropic.com/api/oauth/usage"
+
+# Colors for Pango markup based on usage percentage
+color_for_usage() {
+	local pct="$1"
+	if (( pct >= 90 )); then
+		echo "#ff4444"   # Red
+	elif (( pct >= 70 )); then
+		echo "#ffaa00"   # Orange
+	elif (( pct >= 50 )); then
+		echo "#ffdd57"   # Yellow
+	else
+		echo "#88cc88"   # Green
+	fi
+}
+
+# Format seconds remaining into compact human-readable string
+format_remaining() {
+	local seconds="$1"
+
+	if (( seconds <= 0 )); then
+		echo "0m"
+		return
+	fi
+
+	local days=$(( seconds / 86400 ))
+	local hours=$(( (seconds % 86400) / 3600 ))
+	local minutes=$(( (seconds % 3600) / 60 ))
+
+	local result=""
+	if (( days > 0 )); then
+		result="${days}d"
+		if (( hours > 0 )); then
+			result="$result ${hours}h"
+		fi
+	elif (( hours > 0 )); then
+		result="${hours}h"
+		if (( minutes > 0 )); then
+			result="$result ${minutes}m"
+		fi
+	else
+		result="${minutes}m"
+	fi
+	echo "$result"
+}
+
+# Parse ISO 8601 date and return seconds until that time
+seconds_until() {
+	local iso_date="$1"
+	local reset_epoch now_epoch
+
+	# GNU date can parse ISO 8601 with -d
+	reset_epoch=$(date -d "$iso_date" +%s 2>/dev/null) || { echo "0"; return; }
+	now_epoch=$(date +%s)
+
+	echo $(( reset_epoch - now_epoch ))
+}
+
+# Format a single limit: label + colored percentage + time remaining
+format_limit() {
+	local label="$1"
+	local utilization="$2"
+	local resets_at="$3"
+
+	if [[ -z "$utilization" || "$utilization" == "null" ]]; then
+		echo "${label}: --"
+		return
+	fi
+
+	# Round to integer (jq may return float like 6.0)
+	local pct
+	pct=$(LC_ALL=C printf '%.0f' "$utilization")
+
+	local color
+	color=$(color_for_usage "$pct")
+
+	local time_left="?"
+	if [[ -n "$resets_at" && "$resets_at" != "null" ]]; then
+		local remaining
+		remaining=$(seconds_until "$resets_at")
+		time_left=$(format_remaining "$remaining")
+	fi
+
+	echo "<span color=\"${color}\">${label}: <b>${pct}%</b></span> (${time_left})"
+}
+
+main() {
+	# Read access token
+	if [[ ! -f "$CREDENTIALS_PATH" ]]; then
+		echo "Sin credenciales"
+		exit 0
+	fi
+
+	local token
+	token=$(jq -r '.claudeAiOauth.accessToken // empty' "$CREDENTIALS_PATH" 2>/dev/null)
+
+	if [[ -z "$token" ]]; then
+		echo "Sin credenciales"
+		exit 0
+	fi
+
+	# Fetch usage data
+	local response
+	response=$(curl -sf --max-time 10 \
+		-H "Accept: application/json" \
+		-H "Content-Type: application/json" \
+		-H "User-Agent: claude-code/2.0.32" \
+		-H "Authorization: Bearer ${token}" \
+		-H "anthropic-beta: oauth-2025-04-20" \
+		"$USAGE_ENDPOINT" 2>/dev/null) || {
+		echo "Inicia Claude"
+		exit 0
+	}
+
+	# Parse fields with jq
+	local s_util s_reset w_util w_reset
+	s_util=$(echo "$response" | jq -r '.five_hour.utilization // empty')
+	s_reset=$(echo "$response" | jq -r '.five_hour.resets_at // empty')
+	w_util=$(echo "$response" | jq -r '.seven_day.utilization // empty')
+	w_reset=$(echo "$response" | jq -r '.seven_day.resets_at // empty')
+
+	local session weekly
+	session=$(format_limit "Sesión" "$s_util" "$s_reset")
+	weekly=$(format_limit "Semana" "$w_util" "$w_reset")
+
+	echo "${session}   |   ${weekly}"
+}
+
+main
