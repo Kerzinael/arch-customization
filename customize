@@ -112,6 +112,9 @@ cp "$FILES/home/config/parcellite/parcelliterc" ~/.config/parcellite/
 mkdir -p ~/.config/zim
 cp "$FILES/home/config/zim/preferences.conf" ~/.config/zim/
 
+mkdir -p ~/.config/wireplumber/wireplumber.conf.d
+cp "$FILES/home/config/wireplumber/wireplumber.conf.d/99-switch-on-connect.conf" ~/.config/wireplumber/wireplumber.conf.d/
+
 code --install-extension alefragnani.project-manager > /dev/null 2> /dev/null
 code --install-extension christian-kohler.path-intellisense > /dev/null 2> /dev/null
 code --install-extension dbaeumer.vscode-eslint > /dev/null 2> /dev/null
