@@ -14,10 +14,14 @@ _getDisplay() {
 if [ "$3" == "close" ]; then
 	XAUTHORITY=`_getXauthority`
 	DISPLAY=`_getDisplay`
-	PRIMARY=`XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr | grep eDP | cut -f1 -d\ `
-	XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr --output "$PRIMARY" --off
-	for DEVICE in `XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr | grep -E '\bconnected\b' | grep -v "$PRIMARY" | cut -f1 -d\ `; do
-		XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr --output "$DEVICE" --auto
-	done
+	USER_NAME=`who | grep tty7 | head -1 | cut -f1 -d\ `
+
+	PRIMARY_INTERNAL=$(XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr | grep "eDP" | cut -f1 -d\ )
+	EXTERNAL=$(XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr | grep -E '\bconnected\b' | grep -v "$PRIMARY_INTERNAL" | cut -f1 -d\ )
+
+	XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr --output "$PRIMARY_INTERNAL" --off
+	XAUTHORITY=$XAUTHORITY DISPLAY=$DISPLAY xrandr --output "$EXTERNAL" --auto --primary
+
+	sudo -u $USER_NAME DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY openbox --reconfigure
 fi
 
