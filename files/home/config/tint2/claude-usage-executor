@@ -4,6 +4,7 @@ set -euo pipefail
 
 readonly CREDENTIALS_PATH="$HOME/.claude/.credentials.json"
 readonly USAGE_ENDPOINT="https://api.anthropic.com/api/oauth/usage"
+readonly CLAUDE_BIN="$HOME/.local/bin/claude"
 
 # Colors for Pango markup based on usage percentage
 color_for_usage() {
@@ -113,7 +114,10 @@ main() {
 		-H "Authorization: Bearer ${token}" \
 		-H "anthropic-beta: oauth-2025-04-20" \
 		"$USAGE_ENDPOINT" 2>/dev/null) || {
-		echo "Inicia Claude"
+		if [[ -x "$CLAUDE_BIN" ]] && ! pgrep -f "claude -p ping" > /dev/null 2>&1; then
+			nohup "$CLAUDE_BIN" -p ping > /dev/null 2>&1 &
+		fi
+		echo "Obteniendo uso..."
 		exit 0
 	}
 
